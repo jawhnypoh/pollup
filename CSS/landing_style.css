@@ -4,7 +4,13 @@ header h1 {
   display: inline-block;
   font-size: 72px;
   font-weight: 200;
+  font-family: sans-serif;
   margin: 5px 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .header-list {
@@ -19,21 +25,36 @@ header h1 {
 }
 
 .header-item a {
-  display: inline-block;
+  display: block;
   padding: 10px 20px;
+  font-family: sans-serif;
   text-decoration: none;
-  color: black;
+  color: green;
 }
 
 main {
-  display:flex;
-  flex-wrap: wrap;
+    display: inline-block;
+  background-color: black;
   padding: 20px 20px 100px 20px;
 }
 
+div .button-wrapper {
+  vertical-align: middle;
+  text-align: center;
+}
+
 #create-poll-button {
+  position: absolute;
+  margin-left: 40%;
+  margin-right: auto;
+  margin-top: 22%;
+  width: 140px;
+  height: 50px;
+  font-size: 20px;
   cursor: pointer;
-  background-color: white;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
   border-radius: 30px;
   outline: none;
 }
