@@ -1,0 +1,39 @@
+/* Stylesheet css for Landing Page */
+
+header h1 {
+  display: inline-block;
+  font-size: 72px;
+  font-weight: 200;
+  margin: 5px 20px;
+}
+
+.header-list {
+  list-style-type: none;
+  padding: 5;
+  margin: 0 20px;
+}
+
+.header-item {
+  display: inline;
+  float: right;
+}
+
+.header-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  display:flex;
+  flex-wrap: wrap;
+  padding: 20px 20px 100px 20px;
+}
+
+#create-poll-button {
+  cursor: pointer;
+  background-color: white;
+  border-radius: 30px;
+  outline: none;
+}
