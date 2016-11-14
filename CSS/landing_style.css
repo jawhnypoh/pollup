@@ -30,7 +30,7 @@ nav ul {
 }
 
 .header-item {
-  display: inline;
+  display: inline-block;
   float: right;
 }
 
@@ -38,14 +38,22 @@ nav ul {
   display: block;
   padding: 10px 20px;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 200;    
   font-size: 20px;
   text-decoration: none;
   color: #4CAF50;
+  transition-duration: 0.4s;
+
+}
+
+.header-item a:hover {
+    color: #4CE457;
 }
 
 main {
     display: inline-block;
     //background-color: #846DBC;
+    padding: 20px 20px 100px 20px;
     min-height: 300px; 
     width: 100%;
 }
@@ -75,16 +83,36 @@ div .button-wrapper {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-// Trending Styling
-.trending {
+.polls-div {
+    padding-top: 100px;
+    margin: auto;
+    width: 80%;
     position: relative;
-    margin: 20px;
-    width: 500px;
-    min-height: 300px;
-    background-color: #846DBC;
+    display: flex;
 }
 
-.trending h1 {
+.polls {
+    position: relative;
+    margin: 20px;
+    width: 300px;
+    min-height: 300px;
+    background-color: #846DBC;
+    transition-duration: 0.4s;
+}
+
+.polls h1 {
     margin: 20px;
     text-align: center;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 200;
+    color: white;
+    text-decoration: none;
+}
+
+.polls:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+footer {
+    background-color: darkgray;
 }
