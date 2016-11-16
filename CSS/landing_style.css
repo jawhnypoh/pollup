@@ -151,10 +151,17 @@ main div .ad {
 .genres-div h2 {
     margin: 20px;
     text-align: center;
-    line-height: 250px;
+    line-height: 80px;
     font-weight: 200;
     font-size: 40px;
     color: white;
+}
+
+.genres img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70px;
 }
 
 .genres {
