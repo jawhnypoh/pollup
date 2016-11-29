@@ -1,0 +1,37 @@
+/* Stylesheet CSS for About Page */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    margin: 0;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 65px;
+  font-weight: 200;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 5px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    display: inline-block;
+    padding: 20px 20px 100px 20px;
+    min-height: 300px;
+    width: 100%;
+}
+
+div .wrapper {
+    width: 100%;
+    height: auto;
+}
+
+main div .aboutTitle {
+    margin-top: 10%;
+    font-size: 100px;
+    font-weight: 200;
+}

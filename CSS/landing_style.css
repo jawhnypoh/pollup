@@ -1,4 +1,4 @@
-/* Stylesheet css for Landing Page */
+/* Stylesheet CSS for Landing Page */
 
 body {
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
@@ -107,16 +107,17 @@ main div .ad {
     position: relative;
     margin: 20px;
     width: 300px;
-    min-height: 300px;
+    height: 200px;
     background-color: #846DBC;
     //background-color: #FBAD61;
     transition-duration: 0.4s;
+    border-radius: 5%;
 }
 
 .polls h1 {
     margin: 30px;
     text-align: center;
-    line-height: 250px;
+    line-height: 150px;
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 50px;
     font-weight: 200;
@@ -132,7 +133,7 @@ main div .ad {
 
 .genres-title {
     margin: auto;
-    margin-top: 100px;
+    margin-top: 200px;
     text-align: center;
     font-size: 50px;
 }
@@ -142,8 +143,12 @@ main div .ad {
 }
 
 .genres-div {
+    display: inline-block;
     margin: auto;
     width: 80%;
+    //overflow-x: scroll;
+    //overflow-y: hidden;
+    white-space:nowrap
     position: relative;
     display: flex;
 }
@@ -157,10 +162,12 @@ main div .ad {
     color: white;
 }
 
-.genres img {
+.genres i.fa {
+    position: relative;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    color: white;
+    font-size: 100px;
+    text-align: center;
     padding-top: 70px;
 }
 
@@ -170,6 +177,7 @@ main div .ad {
     margin: 20px;
     width: 300px;
     min-height: 300px;
+    display: inline-block;
     transition-duration: 0.4s;
 }
 
