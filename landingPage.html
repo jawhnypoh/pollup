@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen">
       
     <link rel="stylesheet" href="CSS/landing_style.css" media="screen">
+      
+   <script src="js/landingPage.js"></script>
+  
 
     <title>Welcome</title>
   </head>
@@ -50,34 +53,110 @@
       </div>        
         
       <div class="genres-div">
+            <div class="genres-spacing">
+          
+            </div>
+          
+            <div class="genres">
+            <i class="fa fa-flask" aria-hidden="true"></i>
+  
+            <h2>Science</h2>
+          </div>
+          
           <div class="genres">
-<!--            <img src="images/icons/music.png" alt="Music" style="width: 100px; height: 100px;"> -->
+            <i class="fa fa-desktop" aria-hidden="true"></i>
+  
+            <h2>Tech</h2>
+          </div>
+          
+          <div class="genres">
             <i class="fa fa-music" aria-hidden="true"></i>
   
             <h2>Music</h2> 
           </div>
           
           <div class="genres">
-<!--            <img src="images/icons/politics.png" alt="Politics" style="width: 100px; height: 100px;">  -->
          <i class="fa fa-university" aria-hidden="true"></i>
 
          <h2>Politics</h2>
           </div>
           
           <div class="genres">
-<!--            <img src="images/icons/arts.png" alt="Art" style="width: 100px; height: 100px;">-->
             <i class="fa fa-paint-brush" aria-hidden="true"></i>
   
             <h2>Art</h2>
           </div>
           
+          <div class="genres">
+            <i class="fa fa-plane" aria-hidden="true"></i>
+
+            <h2>Travel</h2>
+          </div>
+          
+          <div class="genres-spacing">
+          
+          </div>
+          
+      </div>   
+        
+      <div class="space">
+          
       </div>    
     </main>
-        
+      
     <footer>
         <div class="copyright">
-        <p>This is a placeholder footer</p>
+            <p>Copyright 2016</p>
         </div>    
-    </footer>    
+    </footer>     
+      
+      <div id="modal-backdrop" class="hidden"></div>
+      <div id="create-poll-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Create a New Poll</h3>
+          <button type="button" class="modal-close-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="poll-input-element required">
+            <label for="poll-input-subject">Question</label>
+            <textarea id="poll-input-subject"></textarea>
+          </div>
+
+          <div class="poll-input-element required">
+            <label for="poll-input-genre">Genre</label>
+            <input type="text" id="poll-input-genre">
+          </div>
+
+          <div class="poll-input-element">
+            <label for="poll-input-details">Details</label>
+            <textarea id="poll-input-details"></textarea>
+          </div>
+
+<!--          <div class="poll-input-element">-->
+            <label for="poll-input-options">Options</label>
+            <div class="options-div">
+<!--                <div class="poll-input-options-div">-->                  <div class="poll-input-element">
+                    <input type="text" id="poll-input-option" placeholder="Input your options here">
+                </div>   
+                
+                <div class="poll-input-options-div">
+                    <input type="text" id="poll-input-option">
+                </div> 
+                
+                <div class="poll-input-options-div">
+                    <input type="text" id="poll-input-option">
+                </div> 
+            </div>
+          </div>      
+<!--        </div>-->
+
+        <div class="modal-footer">
+          <button type="button" class="modal-accept-button">Create Poll</button>
+        </div>
+    </div>
+  </div> 
 </body>
 </html>
