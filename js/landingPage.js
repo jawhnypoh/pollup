@@ -19,6 +19,28 @@ function displayCreatePollModal() {
   }     
 }
 
+
+/* This function adds another polling option to the modal */
+function newPollOption() {
+    console.log("== Function called! ");
+    var newPollElem = document.getElementById('add-option-button');
+    
+    // select div containers of text fields
+    var divContainer = document.getElementById('options-div');
+    
+    var textBox = document.createElement('input');
+    
+    var pollInputElementDiv = document.createElement('div');
+    pollInputElementDiv.classList.add('poll-input-element');
+    
+    pollInputElementDiv.appendChild(textBox);
+    
+    divContainer.appendChild(pollInputElementDiv);
+    
+    var newOptionsDiv = document.createElement('div');
+    newOptionsDiv.classList.add('poll-input-element');
+}
+
 /* This function closes the create new poll modal */
 function closeCreatePollModal() {
 
@@ -49,6 +71,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
     var createPollElem = document.getElementById('create-poll-button');
         createPollElem.addEventListener('click', displayCreatePollModal);
     
+    var addPollOption = document.getElementById('add-option-button');
+        addPollOption.addEventListener('click', newPollOption);
+    
     var modalCloseButton = document.querySelector('#create-poll-modal .modal-close-button');
         modalCloseButton.addEventListener('click', closeCreatePollModal);
+        
 });
