@@ -11,7 +11,8 @@ function displayCreatePollModal() {
   backdropElem.classList.remove('hidden');
   createPollElem.classList.remove('hidden');
     
-  window.onclick = function(event) {
+    // When the user clicks anywhere outside of the modal, close it     
+    window.onclick = function(event) {
     if (event.target == createPollElem) {
         createPollElem.classList.add('hidden');
         backdropElem.classList.add('hidden');
@@ -22,16 +23,18 @@ function displayCreatePollModal() {
 
 /* This function adds another polling option to the modal */
 function newPollOption() {
-    console.log("== Function called! ");
     var newPollElem = document.getElementById('add-option-button');
     
-    // select div containers of text fields
+    // Select div containers of text fields
     var divContainer = document.getElementById('options-div');
     
     var textBox = document.createElement('input');
+    textBox.setAttribute("type", "text");
+    textBox.id = "poll-input-option";
     
     var pollInputElementDiv = document.createElement('div');
     pollInputElementDiv.classList.add('poll-input-element');
+    pollInputElementDiv.id = "poll-input-element";
     
     pollInputElementDiv.appendChild(textBox);
     
@@ -51,8 +54,6 @@ function closeCreatePollModal() {
   backdropElem.classList.add('hidden');
   createPollElem.classList.add('hidden');
     
-  // When the user clicks anywhere outside of the modal, close it   
-
   //clearInputValues();
 }
 
