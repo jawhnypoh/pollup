@@ -3,22 +3,104 @@
   <head>
 
     <meta charset="utf-8">
-    <title>POLLUP</title>
+    <title>Featured</title>
 
-    <link rel="stylesheet" href="sortPage.css" media="screen">
+    <link rel="stylesheet" href="css/sortPageCopy.css" media="screen">
 
   </head>
-  <script src = "sortPage.js">
+  <script src = "js/sortPage.js">
   </script>
 
   <body>
-    <div class = "dropdown">
-      <button onclick = "myFunction()" class = "dropbtn">Sort</button>
-      <div id = "myDropdown" class = "dropdown-content">
-        <a href = "http://google.com">Google</a>
-        <a href = "https://www.youtube.com/channel/UCBVuu8gCilHCX19jYeiuDDg">Subscribe!!!</a>
-      </div>
+
+    <header>
+      <div class = "header"></div>
+    </header>
+
+    <main>
+
+    <div class = "container">
+
+      <input type = "text" name = "search" placeholder = "Search...">
+
+      <button class = "sort" data-sort = "name">
+        Sort by new
+      </button>
+
+      <button class = "sort" data-sort = "name">
+        Sort by trending
+      </button>
+
+      <button class = "sort" data-sort = "name">
+        Sort by popular
+      </button>
+
+      <!-- <div id = "dropdownButton">
+        <div id = "dropdownContent">
+          <ul>
+            <li><a href = "#">Sort &#8595;</a>
+              <ul>
+                <li><a href = "#">New</a></li><li>
+                <a href = "#">Trending</a></li><li>
+                <a href = "#">Top</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+      <section class = "result">
+        <img src = "stock.jpg" alt="HTML5 Icon" style="width:128px; height: 128px; padding: 10px; align: left; border-right: 2px solid #e6e6e6;">
+        <div class = "pollHeader">
+          <h2>Should you take that SOIL bacc core class?</h2>
+        </div>
+
+      </section>
+
+      <section class = "result">
+        <img src = "stock.jpg" alt="HTML5 Icon" style="width:128px; height: 128px; padding: 10px; align: left; border-right: 2px solid #e6e6e6;">
+        <div class = "pollHeader">
+          <h2>Sample question for poll</h2>
+        </div>
+      </section>
+
+      <section class = "result">
+        <img src = "stock.jpg" alt="HTML5 Icon" style="width:128px; height: 128px; padding: 10px; align: left; border-right: 2px solid #e6e6e6;">
+        <div class = "pollHeader">
+          <h2>Sample question for poll</h2>
+        </div>
+      </section>
+
+      <section class = "result">
+        <img src = "stock.jpg" alt="HTML5 Icon" style="width:128px; height: 128px; padding: 10px; align: left; border-right: 2px solid #e6e6e6;">
+        <div class = "pollHeader">
+          <h2>Sample question for poll</h2>
+        </div>
+      </section>
+
     </div>
+
+  </main>
+
+  <footer>
+
+          <div class="footer-image"><img src ="images/PollUp.png" style="width:50px;height:50px;"><p>POLLUP</p></div>
+          <div class ="footer-lists">
+          <div class="footer-list-left">
+              <div class="footer-title"><p>&copy; 2016 PollUp</p></div>
+                  <div class="footer-item"><a href="about.html">About</a></div>
+                  <div class="footer-item"><a href="blog.html">Blog</a></div>
+          </div>
+          <div class="footer-list-right">
+              <div class="footer-title"><p>Support</p></div>
+                  <div class="footer-item"><a href="report.html">Report a Poll</a></div>
+                  <div class="footer-item"><a href="contact.html">Contact Us</a></div>
+                  <div class="footer-item"><a href="community_guidelines.html">Community Guidelines</a></div>
+                  <div class="footer-item"><a href="privacy_policy.html">Privacy Policy</a></div>
+                  <div class="footer-item"><a href="terms_of_use.html">Terms of Use</a></div>
+          </div>
+      </div>
+  </footer>     
 
   </body>
 
