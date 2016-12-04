@@ -37,6 +37,29 @@ div#banner h2 {
     color: white;
 }
 
+div#content {
+    width: 80%;
+    min-width: 1000px;
+    margin: 100px auto 100px auto;
+    background: darkblue;
+}
+
+div#content section.poll-input {
+    
+}
+
+div#content section.poll-input div.poll-input-title {
+    
+}
+
+div#content section.poll-input div.poll-input-title h4{
+    
+}
+
+div#content section.poll-input button.poll-input {
+    
+}
+
 footer {
     position: absolute;
     bottom: 0;
@@ -45,6 +68,6 @@ footer {
     background: purple;
 }
 
-footer p{
+footer p {
     color: white;
 }

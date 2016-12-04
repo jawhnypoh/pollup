@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Heebo', sans-serif;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    min-width: 320px;
+}
+body {
+    /* Margin-bottom f footer */
+    margin: 0 0 200px;
+    width: 100%;
+}
+
+
+
+header {
+    width: 100%;
+    height: 80px;
+}
+header nav {
+    width: 100%;
+    height: 80px;
+    background: #3DFFBE;
+    background: linear-gradient(-75deg, #3DFFBE, #73DCFF);
+    background: -webkit-linear-gradient(-75deg, #3DFFBE, #73DCFF);
+    background: -moz-linear-gradient(-75deg, #3DFFBE, #73DCFF);
+    background: -o-linear-gradient(-75deg, #3DFFBE, #73DCFF);
+}
+    header nav div#nav_left {
+        width: 320px;
+        height: 80px;
+        float: left;
+        margin-left: 6px;
+    }
+        header nav div#nav_left div#icon {
+            width: 71px;
+            height: 80px;
+            float:left;
+        }
+        header nav div#nav_left div#icon img {
+            width: 62px;
+            height: 64px;
+            margin: 10px 0px 6px 9px;
+        }
+        header nav div#nav_left div#pollup {
+            width: 200px;
+            height: 80px;
+            float: left;
+        }
+        header nav div#nav_left div#pollup h1 {
+            color: #4d4d4d;
+            line-height: 76px;
+            font-size: 48px;
+            letter-spacing: -0.5px;
+            margin-left: 1px;
+            float: left;
+        }
+header nav div#nav_right {
+    width: 450px;
+    height: 80px;
+    float: right;
+}
+
+
+
+
+
+main {
+    width: 100%;
+    height: 2000px;
+    background: white;
+}
+
+
+footer {
+    width: 100%;
+    height: 200px;
+    background: silver;
+    position: absolute;
+}
+
+/* 960px ~ 1120px */
+@media screen and (min-width: 1120px) {
+    main {
+    }
+}
+
+/* 960px ~ 1120px */
+@media screen and (min-width: 1120px) {
+    main {
+    }
+}
+
+
+/* 640px ~ 960px */
+@media screen and (min-width: 1120px) {
+    main {
+    }
+}
+
+
+/* 320px ~ 640px */
+@media screen and (min-width: 1120px) {
+    main {
+    }
+}
+
