@@ -8,9 +8,14 @@ body {
 
 
 /* Styling for Header */ 
+header {
+  background: #232d32;
+
+}
+
 header h1 {
   display: inline-block;
-  font-size: 65px;
+  font-size: 45px;
   font-weight: 200;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   margin: 5px 20px;
@@ -18,15 +23,15 @@ header h1 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 
 /* Styling for Nav Bar Options */
 nav {
     position: absolute;
-    right: 0.5px;
-    top: 50;
+    right: 10px;
+    top: 20;
 }
 
 nav ul {
@@ -64,7 +69,7 @@ nav ul {
 /* Styling for Main */
 main {
     display: inline-block;
-    //background-color: lightgray;
+    background-color: lightgray;
     padding: 20px 20px 100px -30px;
     min-height: 300px; 
     width: 100%;
@@ -162,7 +167,6 @@ main div .ad {
     display: inline-block;
     margin-left: 25px;
     margin-right: 20px;
-    //width: 90%;
     height: 400px;
     overflow: auto;
     white-space: nowrap;
@@ -221,19 +225,71 @@ main div .ad {
 
 /* Styling for Footer */
 footer {
-    background-color: #846DBC;
-    color: white;
+  background: #232d32;
+  color: white;
+  height: 250px;
+  display: flex;
+  overflow: hidden;
 }
 
-footer .copyright {
-    height: 30px;
-    text-align: right;
-    padding-right: 25px;
-    font-weight: 200;
+.footer-container {
+    float: right;
+    position: absolute;
 }
 
-footer .copyright p {
-    padding-top: 5px;
+.footer-image {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 30px;
+    padding-right:70px;
+    padding-left: 20px;
+}
+
+.footer-image p {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 6px;
+    padding-left: 10px;
+    font-size: 35px;
+}
+    
+.footer-lists {
+    display: inline-block;
+    min-width: 300px;
+    display: flex;
+    position: relative;
+    float: right;
+    padding-top: 40px;
+    font-size: 12px;
+}
+
+.footer-list-left {
+    display: inline-block;
+    padding-right: 20px;
+    vertical-align:top;
+    
+}
+.footer-list-right {
+    display: inline-block;
+    padding-left: 50px;
+    margin-right: 100px;
+}
+
+.footer-item {
+  text-decoration: none;  
+  padding-top: 10px;
+}
+
+.footer-item a {
+  color:grey;
+  font-size: 12px;  
+  text-decoration: none;
+  transition-duration: 0.4s;
+
+}
+
+.footer-item a:hover {
+    color: #4CE457;
 }
 
 
