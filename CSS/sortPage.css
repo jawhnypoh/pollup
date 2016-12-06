@@ -1,12 +1,14 @@
-*{
+/**{
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
   font-weight: lighter;
-}
+}*/
 
 body{
   background-color: #e9ebee;
-  margin: 0;
-  font-family: sans-serif;
 }
 
 main {
@@ -15,19 +17,30 @@ main {
   padding: 20px 20px 100px 20px;
 }
 
-header{
-  background-color: #99ff99;
-  padding: 5px 20px 0 5px;
-}
-
-.header{
+/* Styling for the header */
+header {
+  background: #232d32;
   width: 100%;
-  min-height: 100px;
-  padding: 0;
-  margin: 0 20px;
-  list-style-type: none;
+  height: 37px;
+  position: fixed;
+  z-index: 1;
+  display: inline-block;
 }
 
+header h1 {
+  display: inline-block;
+  margin-left: 10px;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+
+a {
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+/* Styling for the main container holding the polls */
 .container{
   background-color: white; /* main background color*/
   width: 60%;
@@ -70,6 +83,7 @@ input[type=text]{
   box-shadow: 0 5px 5px 0 rgba(0,0,0,0.24), 0 5px 5px 0 rgba(0,0,0,0.19);
 }
 
+/* Styling for the individual polls that show up */
 .result{
   position: relative;
   height: 150px;
@@ -78,6 +92,7 @@ input[type=text]{
   /*padding: 0 25px 0 25px;*/
   word-wrap: break-word;
   top: 20px;
+  transition: 0.4s;
 }
 
 .result:hover{
@@ -91,6 +106,7 @@ input[type=text]{
   left: 160px;
 }
 
+/* Styling for the footer */
 footer {
   background: #232d32;
   color: white;
