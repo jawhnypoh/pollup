@@ -1,0 +1,20 @@
+{
+  "name": "pollup",
+  "version": "1.0.0",
+  "description": "Site that creates polls",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jawhnypoh/pollup.git"
+  },
+  "author": "Tam Lu, Jerry Peng, Johnny Po, Daniel Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jawhnypoh/pollup/issues"
+  },
+  "homepage": "https://github.com/jawhnypoh/pollup#readme"
+}
