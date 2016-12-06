@@ -24,6 +24,11 @@ header h1 {
 a {
   text-decoration: none;
   color: white;
+  transition-duration: 0.4s;
+}
+
+a:hover {
+    color: #4CE457;
 }
 
 

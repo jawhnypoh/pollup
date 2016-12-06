@@ -59,6 +59,28 @@ a {
 
 }
 
+div .container-1 {
+    position: relative;
+    top: -5px;
+}
+
+i.fa {
+    color: white;
+}
+
+input#search {
+  width: 150px;
+  height: 25px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  position: relative;
+  padding-left: 5px;
+  margin-left: 5px;
+}
+
 .header-item a:hover {
     color: #4CE457;
 }
