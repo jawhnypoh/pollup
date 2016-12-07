@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DONT TOUCH MY TEST PAGE</title>
+    <meta charset = 'utf8'>
+    <script>
+        var voteQS = function(id, index){
+            var str = "id=" + id + "&index=" + index;
+            return str;
+        }
+        var request = new XMLHttpRequest();
+        request.open('POST', 'http://localhost:3000/vote', true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.send(voteQS(6,1));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

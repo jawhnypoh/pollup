@@ -4,6 +4,7 @@ var express = require('express');
 var app = express();
 var file = require('./polls-data.json');
 
+var jsonDir = path.join(__dirname, 'polls-data.json');
 var staticDir = path.join(__dirname, 'public');
 var index = 'mainPage.html';
 var port = process.env.PORT || 3000;
@@ -33,17 +34,29 @@ var createPoll = function (req, file) {
 
 app.post('/createPoll', function(req, res) {
     var fileStr = createPoll(req, file);
-    console.log(fileStr);
-    fs.writeFile(path.join(__dirname, 'polls-data.json'), JSON.stringify(fileStr));
+    fs.writeFile(jsonDir, JSON.stringify(fileStr));
     res.end();
 });
 
 var vote = function (req, file) {
-    
+    var newId = req.body.id, newIndex = req.body.index;
+    newId = parseInt(newId, 10);
+    newIndex = parseInt(newIndex, 10);
+    for(var i = 0; i < file.polls.length; i++){
+        if(file.polls[i].id == newId){
+            var newVotes = JSON.parse(file.polls[i].vote);
+            newVotes[newIndex]++;
+            file.polls[i].vote = JSON.stringify(newVotes);
+            return file;
+        }
+    }
 }
 
 app.post('/vote', function(req, res){
-    vote(req, file);
+    console.log(req.body);
+    var fileStr = vote(req, file);
+    fs.writeFile(jsonDir, JSON.stringify(fileStr));
+    res.end;
 });
 
 app.get('/getPoll', function(req, res){
