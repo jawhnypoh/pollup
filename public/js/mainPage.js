@@ -1,17 +1,3 @@
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
 
 /* This function displays the create new poll modal */
 function displayCreatePollModal() {
@@ -79,47 +65,6 @@ function closeCreatePollModal() {
 //  }
 //}
 
-function displayPollResults() {
-  var pollInputSubject = document.getElementById('poll-input-subject').value || '';
-  var pollInputGenre = document.getElementById('poll-input-genre').value || '';
-  var pollInputDetails = document.getElementById('poll-input-details').value || '';
-  var pollInputOptions = document.getElementsByClassName('poll-input-option') || '', names = [].map.call(pollInputOptions, function (input) {
-      if (input.value != '')
-        return input.value;
-  });
-  names = names.filter(function(n) { return n!=undefined });
-
-  // We only add the note if we have a value for "what".
-  if (pollInputSubject.trim()) {
-      if (names.length != 0) {
-          
-          //0 = subject
-          //1 = genre
-          //2 = details
-          //3 = options
-          var data = [
-            pollInputSubject.trim(),
-            pollInputGenre.trim(),
-            pollInputDetails.trim(),
-            names
-          ];
-          if (localStorage.getItem(1) === null) {
-            idNum = 0;
-            localStorage.setItem(1, ++idNum);
-          } else {
-          idNum = localStorage.getItem(1);
-          localStorage.setItem(1, ++idNum); //sets ID number for storage
-          }
-          closeCreatePollModal();
-        } else {
-            alert('You must enter at least one option!');
-        }
-  } else {
-    // If there's no "what" value specified, throw an alert.
-    alert('You must specify a question!');
-  }
-}
-
 /*function searchInput() {
     if(event.keyCode == 13) {
         sendData({test:'ok'})
@@ -143,6 +88,49 @@ function displayPollResults() {
 //if (form.attachEvent) { form.attachEvent("submit", processForm); } 
 //else { form.addEventListener("submit", processForm); }
 
+var convertToQS = function(title, detail, genre, options){  
+        var vote = [];
+    for(var i = 0; i < options.length; i++){
+        vote.push(0);
+    }
+    var QS = "title=" + title + "&detail=" + detail + "&genre=" + genre + "&options=" + options + "&vote=" + vote;
+    return QS;
+}
+
+function displayPollResults() {
+  var pollInputSubject = document.getElementById('poll-input-subject').value || '';
+  var pollInputGenre = document.getElementById('poll-input-genre').value || '';
+  var pollInputDetails = document.getElementById('poll-input-details').value || '';
+  var pollInputOptions = document.getElementsByClassName('poll-input-option') || '', names = [].map.call(pollInputOptions, function (input) {
+      if (input.value != '')
+        return input.value;
+  });
+  names = names.filter(function(n) { return n!=undefined });
+
+  // We only add the note if we have a value for "what".
+  if (pollInputSubject.trim()) {
+      if (names.length != 0) {
+          
+          //0 = subject
+          //1 = genre
+          //2 = details
+          //3 = options / names
+        var request = new XMLHttpRequest();
+        request.open('POST', 'http://localhost:3000/createPoll', true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.send(convertToQS(pollInputSubject.trim(), pollInputDetails.trim(), pollInputGenre.trim(), names));
+          console.log(pollInputSubject.trim(), pollInputDetails.trim(), pollInputGenre.trim(), names);
+        window.location.href = "resultsPage.html";
+        closeCreatePollModal();
+        } else {
+            alert('You must enter at least one option!');
+        }
+  } else {
+    // If there's no "what" value specified, throw an alert.
+    alert('You must specify a question!');
+  }
+}
+
 
 /* All the variables for button clicks reside here */
 window.addEventListener('DOMContentLoaded', function (event) {
@@ -155,6 +143,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
     var modalCloseButton = document.querySelector('#create-poll-modal .modal-close-button');
         modalCloseButton.addEventListener('click', closeCreatePollModal); 
     
-    var searchBoxElem = document.getElementById('search');
-        searchBoxElem.addEventListener("keyup", searchInput);
+    var createPollPage = document.querySelector('#create-poll-modal .modal-accept-button');
+        createPollPage.addEventListener('click', displayPollResults);  
+//    var searchBoxElem = document.getElementById('search');
+//        searchBoxElem.addEventListener("keyup", searchInput);
 });

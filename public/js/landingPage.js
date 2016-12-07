@@ -30,11 +30,10 @@ function newPollOption() {
     
     var textBox = document.createElement('input');
     textBox.setAttribute("type", "text");
-    textBox.id = "poll-input-option";
+    textBox.classList.add = "poll-input-option";
     
     var pollInputElementDiv = document.createElement('div');
     pollInputElementDiv.classList.add('poll-input-element');
-    pollInputElementDiv.id = "poll-input-element";
     
     pollInputElementDiv.appendChild(textBox);
     

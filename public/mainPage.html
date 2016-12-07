@@ -101,51 +101,46 @@
           <button type="button" class="modal-close-button">&times;</button>
         </div>
 
-        <div class="modal-body">
+                <div class="modal-body">
           <div class="poll-input-element required">
             <label for="poll-input-subject">Question</label>
-            <textarea id="poll-input-subject"></textarea>
+            <input id="poll-input-subject"></textarea>
           </div>
 
           <div class="poll-input-element required">
             <label for="poll-input-genre">Genre</label>
-<!--            <input type="text" id="poll-input-genre">-->
             <div class="genre-select-container">
-                <select id="genre-select">
+                <select id="poll-input-genre">
                     <option class="default select" value="" disabled selected>Choose your genre</option>
                     <option value="science">Science</option>
                     <option value="technology">Technology</option>
                     <option value="music">Music</option>
                     <option value="politics">Politics</option>
-                    <option value="art">Art</option>
-                    <option value="travel">Travel</option>
-                </select>
-            </div>
+                </select>  
+            </div>  
           </div>
 
           <div class="poll-input-element">
             <label for="poll-input-details">Details</label>
             <textarea id="poll-input-details"></textarea>
           </div>
-
-            <label for="poll-input-options">Options</label>
-            <div class="options-div" id="options-div">
+          <div class="options-div" id="options-div">
                <div class="poll-input-element" id="poll-input-element">
-                    <input type="text" id="poll-input-option" placeholder="Input your options here">
-                </div>
-
+                    <input type=text class="poll-input-option" placeholder="Input your options here">
+                </div>   
+                
                 <div class="poll-input-element" id="poll-input-element">
-                    <input type="text" id="poll-input-option">
-                </div>
-
+                    <input type=text class="poll-input-option"> 
+                </div> 
+                
                 <div class="poll-input-element" id="poll-input-element">
-                    <input type="text" id="poll-input-option">
-                </div>
+                    <input type=text class="poll-input-option">       
             </div>
-
+          </div>      
+            
           <button type="button" id="add-option-button">Add Option</button>
 
-          </div>
+          </div>   
 
         <div class="modal-footer">
           <button type="button" class="modal-accept-button">Create Poll</button>
