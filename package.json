@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jawhnypoh/pollup/issues"
   },
-  "homepage": "https://github.com/jawhnypoh/pollup#readme"
+  "homepage": "https://github.com/jawhnypoh/pollup#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2"
+  }
 }

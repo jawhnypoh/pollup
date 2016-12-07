@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DONT TOUCH MY TEST PAGE</title>
+    <meta charset = 'utf8'>
+    <script>
+        var data = {
+            title: "should we go out to eat?",
+            detail: "Answer the question",
+            genre: "lifestyle",
+            options: ["yes", "no", "whatever"],
+            vote: [0, 0, 0]
+        };
+        var request = new XMLHttpRequest();
+        request.open('POST', 'http://localhost:3000/createPoll', true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.send(data);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
