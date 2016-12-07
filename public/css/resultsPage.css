@@ -150,8 +150,9 @@ input#search {
     display: block;
 }
 
-/* Styling for the results container*/
 
+
+/* Styling for the results container*/
 .question{
     font-size: 80px;
     font-weight: bolder;
@@ -222,6 +223,11 @@ form{
 }
 
 
+/* Styling for Spacing */
+.spacing {
+    width: 100%;
+    height: 100px;
+}
 
 
 /* Background color of Create Poll */
@@ -278,7 +284,7 @@ footer {
     padding-top: 30px;
     position: relative;
     width: 50%;
-    height: 100%;
+    height: 80%;
     text-align: right;
 }
 
@@ -291,7 +297,7 @@ footer {
 
 .footerLists{
   display: inline-block;
-  height: 100%;
+  height: 80%;
   padding-top: 30px;
 }
 
