@@ -1,4 +1,4 @@
-var path = require('path');
+/*var path = require('path');
 var http = require('http');
 var fs = require('fs');
 var url = require('url');
@@ -36,16 +36,14 @@ function recordFile(path, url){
 function handleRequest(request, response) {
     app.use(express.static(__dirname + '/public'));
     // favicon
-    console.log(request.url.split('.').pop());
     if (request.url === '/favicon.ico') {
         response.writeHead(200, {'Content-Type': 'image/x-icon'} );
         response.end();
         return;
-    } else if (request.url.split('.').pop() == 'jpg') {
-        response.writeHead(200, {'Content-Type': 'image/jpeg'} );
-        var content = recordFile(path.join(staticDir, request.url), request.url);
-        response.write(content);
-        response.end();
+    } else if (request.url.split('.').pop() == 'png') {
+        console.log("Hello");
+        response.writeHead(200, {'Content-Type': 'image/png'} );
+        response.end;
         return;
     }
     
@@ -82,7 +80,9 @@ var server = http.createServer(handleRequest);
 server.listen(port);
 
 
-/*var server = http.createServer(handleRequest);
+-------------------------------------
+
+var server = http.createServer(handleRequest);
 server.listen(port);
 =======
 var path = require('path');
@@ -130,3 +130,27 @@ app.listen(port, function () {
   console.log("== Listening on port", port);
 });
 >>>>>>> d04eddf74c40925da9f8d5dfcf4e06408674d8e7*/
+
+var path = require('path');
+//var http = require('http');
+//var fs = require('fs');
+//var url = require('url');
+var express = require('express');
+var app = express();
+
+var staticDir = path.join(__dirname, 'public');
+var indexFilename = 'landingPage.html';
+var notFoundFilename = '404.html';
+var port = process.env.PORT || 3000;
+
+app.get('/', function (req, res, next) {
+    console.log(path.join(staticDir, indexFilename));
+    res.sendFile(path.join(staticDir, indexFilename));
+    //next();
+});
+
+app.use(express.static(staticDir));
+
+app.listen(port, function() {
+    console.log("Listening on " + port);
+});
