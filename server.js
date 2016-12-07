@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var createPoll = function (req, file) {
-    console.log(req);
+    console.log(req.body);
     var fileStr = file, idNum;
     if(fileStr.polls[0]){
         idNum = fileStr.polls[fileStr.polls.length - 1].id + 1;
