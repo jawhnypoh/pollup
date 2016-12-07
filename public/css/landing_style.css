@@ -75,7 +75,7 @@ nav ul {
 main {
     display: inline-block;
     background-color: lightgray;
-    padding: 20px 20px 100px 30px;
+    //padding: 20px 20px 100px 30px;
     min-height: 300px;
     width: 100%;
 }

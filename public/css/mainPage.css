@@ -425,7 +425,7 @@ footer {
     padding-top: 30px;
     position: relative;
     width: 50%;
-    height: 100%;
+    height: 80%;
     text-align: right;
 }
 
@@ -438,7 +438,7 @@ footer {
 
 .footerLists{
   display: inline-block;
-  height: 100%;
+  height: 80%;
   padding-top: 30px;
 }
 
