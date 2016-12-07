@@ -14,10 +14,9 @@
             return QS;
         }
         var request = new XMLHttpRequest();
-        console.log([1,2,2,3] + "Hello");
         request.open('POST', 'http://localhost:3000/createPoll', true);
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.send(convertToQS(/*fill this in */));
+        request.send(convertToQS("a", "b", "c", "d"));
     </script>
 </head>
 <body>

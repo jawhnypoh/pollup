@@ -2,9 +2,9 @@ var path = require('path');
 var fs = require('fs');
 var express = require('express');
 var app = express();
-var file = require('./polls-data.json');
+var file = require('./public/polls-data.json');
 
-var jsonDir = path.join(__dirname, 'polls-data.json');
+var jsonDir = path.join(__dirname, 'public', 'polls-data.json');
 var staticDir = path.join(__dirname, 'public');
 var index = 'mainPage.html';
 var port = process.env.PORT || 3000;
@@ -53,14 +53,15 @@ var vote = function (req, file) {
 }
 
 app.post('/vote', function(req, res){
-    console.log(req.body);
     var fileStr = vote(req, file);
     fs.writeFile(jsonDir, JSON.stringify(fileStr));
-    res.end;
+    res.end();
 });
 
-app.get('/getPoll', function(req, res){
-    getPoll(req, file);
+
+app.get('/getJSON', function(req, res){
+    res.send(jsonDir);
+    res.end();
 });
 
 app.get('/', function (req, res, next) {
