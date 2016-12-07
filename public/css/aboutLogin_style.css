@@ -28,6 +28,11 @@ header h1 {
 a {
   text-decoration: none;
   vertical-align: middle;
+  transition-duration: 04.s;    
+}
+
+a:hover {
+    color: #4CE457;
 }
 
 .header-list-left{
@@ -58,6 +63,28 @@ a {
   text-decoration: none;
   color: white;
   transition-duration: 0.4s;
+}
+
+div .container-1 {
+    position: relative;
+    top: -5px;
+}
+
+i.fa {
+    color: white;
+}
+
+input#search {
+  width: 150px;
+  height: 25px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  position: relative;
+  padding-left: 5px;
+  margin-left: 5px;
 }
 
 .header-item a:hover {
