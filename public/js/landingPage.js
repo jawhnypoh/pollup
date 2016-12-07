@@ -91,7 +91,13 @@ function displayPollResults() {
             pollInputDetails.trim(),
             names
           ];
-          localStorage.setItem(1, idNum) //sets ID number for storage
+          if (localStorage.getItem(1) === null) {
+            idNum = 0;
+            localStorage.setItem(1, ++idNum);
+          } else {
+          idNum = localStorage.getItem(1);
+          localStorage.setItem(1, ++idNum); //sets ID number for storage
+          }
           closeCreatePollModal();
         } else {
             alert('You must enter at least one option!');
