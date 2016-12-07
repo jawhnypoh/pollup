@@ -11,10 +11,12 @@
             options: ["yes", "no", "whatever"],
             vote: [0, 0, 0]
         };
+        
+        // Convert the code to query string below
         var request = new XMLHttpRequest();
         request.open('POST', 'http://localhost:3000/createPoll', true);
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.send(data);
+        request.send('title="should we go"&detail="answer"&genre="lifestyle"&options=["yes","no","whatever"]&vote=[0,0,0]');
     </script>
 </head>
 <body>
