@@ -144,14 +144,11 @@ input#search {
 }
 
 /* Styling for the results container*/
-.resultsContainer{
-    min-height: 1000px;
-}
 
 .question{
     font-size: 80px;
     font-weight: bolder;
-    padding-left: 20px;
+    padding-left: 60px;
     padding-top: 20px;
     
 }
@@ -160,24 +157,49 @@ input#search {
     margin-top: 350px;
 }
 
-.container2{
-  min-height: 700px;
+.results-modal {
+    color: blue;
+    z-index: 1; /*sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
 }
 
+.results-modal-content {
+
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
 form{
-  font-size: 30px;
+  font-size: 24px;
   font-weight: lighter;
-  padding: 20px;
+  padding: 60px;
 }
 
-.buttonVote{
+#buttonVote{
     font-weight: lighter;
     font-size: 30px;
     padding: 15px;
     padding: 20px;
     margin: 20px;
 }
-.buttonVote:hover{
+#buttonVote:hover{
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+
+#buttonResults{
+    font-weight: lighter;
+    font-size: 30px;
+    padding: 15px;
+    padding: 20px;
+    margin: 20px;
+}
+#buttonResults:hover{
   cursor: pointer;
   background-color: #d9d9d9;
 }

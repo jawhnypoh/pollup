@@ -30,7 +30,9 @@ function getRandomColor() {
 
 */
 
-function createHTML(int options[]) {
+var resultsMdl = document.getElementById('resultsModal');
+
+function createHTML(int options) {
     var pollNum = options.length();
     var sum = 0;
     
@@ -58,27 +60,12 @@ function createHTML(int options[]) {
 
 function displayPollResults(int len) {
   for (var i = 0; i < len; i++) {
-      
+      console.log("cool");
   }
   
   // We only add the note if we have a value for "what".
   if (pollInputSubject.trim()) {
-      if (names.length != 0) {
-          
-          //0 = subject
-          //1 = genre
-          //2 = details
-          //3 = options / names
-        var request = new XMLHttpRequest();
-        console.log([1,2,2,3] + "Hello");
-        request.open('POST', 'http://localhost:3000/createPoll', true);
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.send(convertToQS(pollInputSubject.trim(), pollInputDetails.trim(), pollInputGenre.trim(), names));
-        window.location.href = "resultsPage.html";
-        closeCreatePollModal();
-        } else {
-            alert('You must enter at least one option!');
-        }
+
   } else {
     // If there's no "what" value specified, throw an alert.
     alert('You must specify a question!');
@@ -86,9 +73,22 @@ function displayPollResults(int len) {
 }
 
 window.addEventListener('DOMContentLoaded', function (event) {
-    var createPollElem = document.getElementById('vote-button');
-        createPollElem.addEventListener('click', viewVoteButton(options.length));
+    var resultsBtn = document.getElementById('buttonResults');
+        resultsBtn.addEventListener('click', viewResultsButton);
+    var voteBtn = document.getElementById('buttonVote');
+        voteBtn.addEventListener('click', viewVoteButton);
+}
+
+                        
+function viewResultsButton()  {
     
-    var addPollOption = document.getElementById('results-button');
-        addPollOption.addEventListener('click', viewResultsButton(options.length));
+}            
+resultsBtn.onclick = function() {
+    console.log("displaynone");
+    resultsMdl.style.display = "none";
+}
+
+voteBtn.onclick = function() {
+    console.log("displaynone");
+    resultsMdl.style.display = "none";
 }
