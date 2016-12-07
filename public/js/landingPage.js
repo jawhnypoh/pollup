@@ -1,6 +1,5 @@
 /* This is the JS code for the Landing Page */
 
-
 /* This function displays the create new poll modal */
 function displayCreatePollModal() {
 
