@@ -143,6 +143,57 @@ input#search {
     display: block;
 }
 
+/* Styling for the results container*/
+.resultsContainer{
+    min-height: 1000px;
+}
+
+.question{
+    font-size: 80px;
+    font-weight: bolder;
+    padding-left: 20px;
+    padding-top: 20px;
+    
+}
+
+.buttons{
+    margin-top: 350px;
+}
+
+.container2{
+  min-height: 700px;
+}
+
+form{
+  font-size: 30px;
+  font-weight: lighter;
+  padding: 20px;
+}
+
+.buttonVote{
+    font-weight: lighter;
+    font-size: 30px;
+    padding: 15px;
+    padding: 20px;
+    margin: 20px;
+}
+.buttonVote:hover{
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+
+.option{
+    padding: 10px;
+    font-size: 50px;
+}
+
+.buttons{
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
 
 /* Background color of Create Poll */
 .wrapper {
@@ -182,7 +233,7 @@ input#search {
 .pie {
     width: 100px; height: 100px;
     border-radius:50%;
-    background: 
+    background:
 }
 
 /* Styling for the footer */

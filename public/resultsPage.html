@@ -51,53 +51,61 @@
             <button id="create-poll-button">create poll</button>
         </center>
       </div>
+
+   <div class = "resultsContainer">
       <div class="question">QUESTION?</div>
-      <div class="vote">
+      <div class="container2">
           <form action="demo_form.asp" method="get">
-            <input type="checkbox" name="option">Option 1<br>
-            <input type="checkbox" name="option">Option 2<br>
+            <input type="checkbox" name="option">Option 1</input></br>
+            <input type="checkbox" name="option">Option 2</input></br>
             <section class="buttons">
-                <input type="submit" value="Vote">  
-                <input type="results" value="Results">    
+                <button class = "buttonVote">Vote</button>
+                <button class = "buttonVote">Results</button>
             </section>
-          </form> 
-      </div>
-        
-      <div class="results">
+          </form>
+
           <div class="pie">
               <div class="pie_visual"></div>
-                      
-              
+
+
               <div class="option-results"><div class="option-results">Option 1</div> - 70%</div>
-              
+
               <div class="option-results"><div class="option-results">Option 2</div> - 30%</div>
-              
-                          
+
+          </div>
+      </div>
+
+      <div class="results">
+
+        </div>
+    </div>
+
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-        
-        
+
+
         function createArr(int options[], int votes[]) {
             //add question to title
             var addHTML = document.GetElementsByClassName('question');
             addHTML.insertAdjacentHTML('beforeend', options.title);
-            
-            
-            
+
+
+
             var pollNum = options.length(); //find number of poll options
             var arr = [[]];
             for (var i=1; i < pollNum + 1; i++){
                 for (var j= 0; j < 2; j++) {
                     arr[i] =[];
                     if (j === 0)
-                        arr[i][j] = options[i]; 
-                    else 
+                        arr[i][j] = options[i];
+                    else
                         arr[i][j] = votes[i];
                 }
             }
         }
 
-        
+
 
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
@@ -113,9 +121,9 @@
         chart.draw(data, options);
       }
     </script>
-    <div id="donutchart" style="width: 900px; height: 500px;"></div> 
-              
-              
+    <div id="donutchart" style="width: 900px; height: 500px;"></div>
+
+
           </div>
       </div>
     </main>
