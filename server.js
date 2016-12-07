@@ -62,6 +62,19 @@ app.get('/', function (req, res, next) {
     res.sendFile(path.join(staticDir, index));
 });
 
+/*app.get('/resultData', function (req, res, next){
+    var response, data;
+    for(var i = 0; i < file.polls.length; i++){
+        response = file.polls[i].id;
+        if(parseInt(response, 10) == req.query.id){
+            data = JSON.stringify(file.polls[i]);
+            break;
+        }
+    }
+    res.render('resultData', data);
+    res.end();
+});*/
+
 app.use(express.static(staticDir));
 
 app.get('*', function(req, res) {
@@ -71,11 +84,3 @@ app.get('*', function(req, res) {
 app.listen(port, function() {
     console.log("Listening on " + port);
 }); 
-
-
-/*{
-    "poll":
-    [
-        {title: "whatever",id detail: genre:, options[] votes[],
-    ]
-}*/
