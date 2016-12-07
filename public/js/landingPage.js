@@ -1,5 +1,6 @@
 /* This is the JS code for the Landing Page */
 
+
 /* This function displays the create new poll modal */
 function displayCreatePollModal() {
 
@@ -45,7 +46,7 @@ function newPollOption() {
 
 /* This function closes the create new poll modal */
 function closeCreatePollModal() {
-
+    
   var backdropElem = document.getElementById('modal-backdrop');
   var createPollElem = document.getElementById('create-poll-modal');
 
@@ -66,6 +67,41 @@ function closeCreatePollModal() {
 //  }
 //}
 
+function displayPollResults() {
+  var pollInputSubject = document.getElementById('poll-input-subject').value || '';
+  var pollInputGenre = document.getElementById('poll-input-genre').value || '';
+  var pollInputDetails = document.getElementById('poll-input-details').value || '';
+  var pollInputOptions = document.getElementsByClassName('poll-input-option') || '', names = [].map.call(pollInputOptions, function (input) {
+      if (input.value != '')
+        return input.value;
+  });
+  names = names.filter(function(n) { return n!=undefined });
+
+  // We only add the note if we have a value for "what".
+  if (pollInputSubject.trim()) {
+      if (names.length != 0) {
+          
+          //0 = subject
+          //1 = genre
+          //2 = details
+          //3 = options
+          var data = [
+            pollInputSubject.trim(),
+            pollInputGenre.trim(),
+            pollInputDetails.trim(),
+            names
+          ];
+          localStorage.setItem(1, idNum) //sets ID number for storage
+          closeCreatePollModal();
+        } else {
+            alert('You must enter at least one option!');
+        }
+  } else {
+    // If there's no "what" value specified, throw an alert.
+    alert('You must specify a question!');
+  }
+}
+
 /* All the variables for button clicks reside here */
 window.addEventListener('DOMContentLoaded', function (event) {
     var createPollElem = document.getElementById('create-poll-button');
@@ -77,4 +113,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
     var modalCloseButton = document.querySelector('#create-poll-modal .modal-close-button');
         modalCloseButton.addEventListener('click', closeCreatePollModal);
         
+    var createPollPage = document.querySelector('#create-poll-modal .modal-accept-button');
+        createPollPage.addEventListener('click', displayPollResults);     
 });

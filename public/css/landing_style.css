@@ -327,7 +327,7 @@ main div .ad {
 }
 
 .poll-input-element.required label::after {
-  content: ' *';
+  content: '*';
   color: red;
 }
 
