@@ -78,49 +78,64 @@ a {
 }
 /*Account Dropdown for Header*/
     /*Dropdown Button*/
-    .dropbtn {
-        background-color: #4CAF50;
-        border-radius:50%;
-        margin-top: 1px;
-        padding: 2px;
-        border: none;
-        cursor: pointer;
-    }
+.dropbtn {
+  background-color: #4CAF50;
+  border-radius:50%;
+  margin-top: 1px;
+  padding: 2px;
+  border: none;
+  cursor: pointer;
+}
 
-    /* Dropdown button on hover & focus */
-    .dropbtn:hover, .dropbtn:focus {
-        background-color: #3e8e41;
-    }
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
 
-    /* The container <div> - needed to position the dropdown content */
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-    /* Dropdown Content (Hidden by Default) */
-    .dropdown-content {
-        right:0;
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    }
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  right:0;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
 
-    /* Links inside the dropdown */
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 
-    /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {background-color: #f1f1f1}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
 
-    /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-    .show {display:block;}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+display:block;
+}
+
+input#headerSearch {
+  width: 150px;
+  height: 25px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  position: relative;
+  padding-left: 5px;
+  margin-left: 5px;
+}
 
 /* Styling for the main container holding the polls */
 .container{
@@ -132,20 +147,6 @@ a {
   min-width: 800px;
 }
 
-input[type=text]{
-  width: 200px;
-  height: 32px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  position: relative;
-  top: 10px;
-  padding-left: 10px;
-  margin-left: 10px;
-}
-
 div .container-1 {
     position: relative;
     top: -5px;
@@ -155,7 +156,7 @@ i.fa {
     color: white;
 }
 
-input#search {
+input#bodySearch {
   width: 150px;
   height: 25px;
   box-sizing: border-box;

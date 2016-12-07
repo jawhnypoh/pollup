@@ -13,42 +13,24 @@ function sortByPopular(){
   window.location.href = "sortPagePopular.html";
 }
 
-// For the nav-bar dropdown menu
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+function headerSearchInput(){
+  if(event.keyCode == 13){
+    var searchInputElem = document.getElementById("headerSearch").value;
+    console.log("== Search: ", searchInputElem);
   }
 }
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function genreSort() {
-    document.getElementById("genreMyDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.genreDropdown')) {
-
-    var dropdowns = document.getElementsByClassName("genre-dropdown-content");
-    if (openDropdown.classList.contains('show')) {
-      openDropdown.classList.remove('show');
-    }
+function bodySearchInput(){
+  if(event.keyCode == 13){
+    var searchInputElem = document.getElementById("bodySearch").value;
+    console.log("== Search: ", searchInputElem);
   }
 }
 
+window.addEventListener('DOMContentLoaded', function(event){
+  var headerSearchBoxElem = document.getElementById('headerSearch');
+  headerSearchBoxElem.addEventListener("keyup", headerSearchInput);
+
+  var bodySearchBoxElem = document.getElementById('bodySearch');
+  bodySearchBoxElem.addEventListener("keyup", bodySearchInput);
+});
