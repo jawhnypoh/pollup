@@ -1,9 +1,3 @@
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function dropMenu() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -64,7 +58,7 @@ function newPollOption() {
 
 /* This function closes the create new poll modal */
 function closeCreatePollModal() {
-
+    
   var backdropElem = document.getElementById('modal-backdrop');
   var createPollElem = document.getElementById('create-poll-modal');
 
@@ -85,18 +79,73 @@ function closeCreatePollModal() {
 //  }
 //}
 
-function searchInput() {
+function displayPollResults() {
+  var pollInputSubject = document.getElementById('poll-input-subject').value || '';
+  var pollInputGenre = document.getElementById('poll-input-genre').value || '';
+  var pollInputDetails = document.getElementById('poll-input-details').value || '';
+  var pollInputOptions = document.getElementsByClassName('poll-input-option') || '', names = [].map.call(pollInputOptions, function (input) {
+      if (input.value != '')
+        return input.value;
+  });
+  names = names.filter(function(n) { return n!=undefined });
+
+  // We only add the note if we have a value for "what".
+  if (pollInputSubject.trim()) {
+      if (names.length != 0) {
+          
+          //0 = subject
+          //1 = genre
+          //2 = details
+          //3 = options
+          var data = [
+            pollInputSubject.trim(),
+            pollInputGenre.trim(),
+            pollInputDetails.trim(),
+            names
+          ];
+          if (localStorage.getItem(1) === null) {
+            idNum = 0;
+            localStorage.setItem(1, ++idNum);
+          } else {
+          idNum = localStorage.getItem(1);
+          localStorage.setItem(1, ++idNum); //sets ID number for storage
+          }
+          closeCreatePollModal();
+        } else {
+            alert('You must enter at least one option!');
+        }
+  } else {
+    // If there's no "what" value specified, throw an alert.
+    alert('You must specify a question!');
+  }
+}
+
+/*function searchInput() {
     if(event.keyCode == 13) {
-         var searchInputElem = document.getElementById("search").value;
+        sendData({test:'ok'})
+         var searchInputElem = document.getElementById("search").elements;
         console.log('== Search: ', searchInputElem);
     }
-}
+}*/
+
+//function processForm(e) {
+//    if (e.preventDefault) e.preventDefault();
+//
+//    var textinput = document.getElementById("search");
+//    var searchterm = textinput.value;
+//    window.location.assign("sortPage.html?term=" + searchterm);
+//
+//    return false; // Block form
+//}
+//
+//var form = document.getElementById('search-form');
+//
+//if (form.attachEvent) { form.attachEvent("submit", processForm); } 
+//else { form.addEventListener("submit", processForm); }
+
 
 /* All the variables for button clicks reside here */
 window.addEventListener('DOMContentLoaded', function (event) {
-    var openDropDownElem = document.getElementById('myDropdown');
-        openDropDownElem.addEventListener('click', dropMenu);
-    
     var createPollElem = document.getElementById('create-poll-button');
         createPollElem.addEventListener('click', displayCreatePollModal);
     
