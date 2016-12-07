@@ -58,12 +58,6 @@ app.post('/vote', function(req, res){
     res.end();
 });
 
-
-app.get('/getJSON', function(req, res){
-    res.send(jsonDir);
-    res.end();
-});
-
 app.get('/', function (req, res, next) {
     res.sendFile(path.join(staticDir, index));
 });

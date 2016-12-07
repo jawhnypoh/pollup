@@ -2,19 +2,20 @@
 <html>
 <head>
     <title>DONT TOUCH MY TEST PAGE</title>
-    <meta charset = 'utf8'>
+    <meta charset = 'UTF-8'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-        var voteQS = function(id, index){
-            var str = "id=" + id + "&index=" + index;
-            return str;
-        }
-        var request = new XMLHttpRequest();
-        request.open('POST', 'http://localhost:3000/vote', true);
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.send(voteQS(6,1));
-        var request = new XMLHttpRequest();
-        request.open('Get', 'http://localhost:3000/getJSON', true);
-        request.send("JSON");
+        var json;
+        $.ajax({
+            dataType: "json",
+            url: "./polls-data.json",
+            async: false,
+            success: function(data) {
+                console.log(data);
+                json = data;
+            }
+        });
+        console.log(json);
     </script>
 </head>
 <body>
