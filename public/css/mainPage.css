@@ -59,12 +59,18 @@ a {
 }
 
 div .container-1 {
+    right: 15px;
     position: relative;
-    top: -5px;
+}
+
+div .container-2 {
+    position: relative;
+    top: -20px;
 }
 
 i.fa {
     color: white;
+    right: 20px;
 }
 
 input#search {
@@ -146,9 +152,16 @@ input#search {
 
 /* Background color of Create Poll */
 .wrapper {
+    background-image: url('http://i68.tinypic.com/m7rvw6.jpg');
     width: 100%;
+    background-position:  bottom;
     height: 300px;
-    background: grey;
+}
+
+#background-image {
+    position: relative;
+    display: block;
+    top: -100px;
 }
 
 
@@ -176,13 +189,14 @@ input#search {
 
 /* Styling for Following Polls Section */
 .following-polls {
-    background: #4CE457;
+    background: gray;
     padding-bottom: 500px;
     min-height: 500px;
 }
 .following-polls h1 {
     padding-top: 50px;
     padding-left: 50px;
+    font-weight: 200;
     color: white;
 }
 .polls {
@@ -193,6 +207,7 @@ input#search {
     width: 90%;
     height: 200px;
     background: white;
+    border-radius: 10px;
     transition-duration: 0.4s;
 }
 
@@ -424,8 +439,7 @@ footer {
     vertical-align: top;
     padding-top: 30px;
     position: relative;
-    padding-right: 10px;
-    width: 46%;
+    width: 50%;
     height: 80%;
     text-align: right;
 }
@@ -434,7 +448,7 @@ footer {
     display:inline-block;
     vertical-align: top;
     padding-left: 10px;
-    font-size: 33px;
+    font-size: 35px;
 }
 
 .footerLists{
@@ -448,11 +462,10 @@ footer {
     padding-right: 20px;
     padding-left: 20px;
     vertical-align: top;
-    font-size: 14px;
 }
 
 .leftList{
-  padding-top: 5px;
+  padding-top: 10px;
   list-style-type: none;
 }
 .leftList a{
@@ -464,9 +477,10 @@ footer {
 
 }
 
+
+
 .rightList{
-  font-size: 14px;
-  padding-top: 5px;
+  padding-top: 10px;
   list-style-type: none;
 }
 .rightList a{
@@ -478,7 +492,6 @@ footer {
 }
 
 .footer-list-right {
-  font-size: 14px;
     display: inline-block;
     padding-left: 30px;
     position: relative;
