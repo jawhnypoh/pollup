@@ -431,9 +431,10 @@ footer {
 .footer-image {
     display: inline-block;
     vertical-align: top;
-    margin-top: 30px;
+    padding-top: 30px;
     position: relative;
-    min-width: 50%;
+    padding-right: 10px;
+    width: 46%;
     height: 80%;
     text-align: right;
 }
@@ -442,26 +443,26 @@ footer {
     display:inline-block;
     vertical-align: top;
     padding-left: 10px;
-    margin-top: 0px;
-    font-size: 35px;
+    font-size: 33px;
 }
 
 .footerLists{
   display: inline-block;
   height: 80%;
-  margin-top: 30px;
+  padding-top: 30px;
 }
 
 .footer-list-left {
     display: inline-block;
-    padding-right: 10px;
+    padding-right: 20px;
     padding-left: 20px;
     vertical-align: top;
+    font-size: 14px;
 }
 
 .leftList{
+  padding-top: 5px;
   list-style-type: none;
-  padding-left: 0;
 }
 .leftList a{
   color: grey;
@@ -472,11 +473,10 @@ footer {
 
 }
 
-
-
 .rightList{
+  font-size: 14px;
+  padding-top: 5px;
   list-style-type: none;
-  padding-left: 0;
 }
 .rightList a{
   color: grey;
@@ -487,6 +487,7 @@ footer {
 }
 
 .footer-list-right {
+  font-size: 14px;
     display: inline-block;
     padding-left: 30px;
     position: relative;

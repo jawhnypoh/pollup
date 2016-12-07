@@ -289,7 +289,8 @@ footer {
     vertical-align: top;
     padding-top: 30px;
     position: relative;
-    width: 50%;
+    padding-right: 10px;
+    width: 46%;
     height: 80%;
     text-align: right;
 }
@@ -298,7 +299,7 @@ footer {
     display:inline-block;
     vertical-align: top;
     padding-left: 10px;
-    font-size: 35px;
+    font-size: 33px;
 }
 
 .footerLists{
@@ -312,10 +313,11 @@ footer {
     padding-right: 20px;
     padding-left: 20px;
     vertical-align: top;
+    font-size: 14px;
 }
 
 .leftList{
-  padding-top: 10px;
+  padding-top: 5px;
   list-style-type: none;
 }
 .leftList a{
@@ -328,7 +330,8 @@ footer {
 }
 
 .rightList{
-  padding-top: 10px;
+  font-size: 14px;
+  padding-top: 5px;
   list-style-type: none;
 }
 .rightList a{
@@ -340,6 +343,7 @@ footer {
 }
 
 .footer-list-right {
+  font-size: 14px;
     display: inline-block;
     padding-left: 30px;
     position: relative;
