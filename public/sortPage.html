@@ -7,9 +7,10 @@
 
     <link rel="stylesheet" href="css/sortPage.css" media="screen">
 
+    <script src = "js/sortPage.js"></script>
+    <script src = "js/mainPage.js"></script>
   </head>
-  <script src = "js/sortPage.js">
-  </script>
+
 
   <body>
 
@@ -49,24 +50,63 @@
 
       <input type = "text" name = "search" placeholder = "Search...">
 
-      <button class = "sort" data-sort = "name">
+      <button class = "sort" data-sort = "name" onclick = "sortByNew()">
         Sort by new
       </button>
 
-      <button class = "sort" data-sort = "name">
+      <button class = "sort" data-sort = "name" onclick = "sortByTrending()">
         Sort by trending
       </button>
 
-      <button class = "sort" data-sort = "name">
+      <button class = "sort" data-sort = "name" onclick = "sortByPopular()">
         Sort by popular
       </button>
+
+      <div class = "genreDropdown">
+        <button onclick="genreSort()" class="genreDropbtn">Dropdown &#8595;</button>
+        <div id="genreMyDropdown" class="genre-dropdown-content">
+          <a href = "#">Science</a>
+          <a href = "#">Tech</a>
+          <a href = "#">Music</a>
+          <a href = "#">Politics</a>
+        </div>
+      </div>
+
+
 
       <section class = "result">
         <img src = "images/stock.jpg" alt="HTML5 Icon" style="width:128px; height: 128px; padding: 10px; align: left; border-right: 2px solid #e6e6e6;">
         <div class = "pollHeader">
           <h2>Should you take that SOIL bacc core class?</h2>
         </div>
+      </section>
 
+      <section class = "result">
+        <img src = "images/stock.jpg" alt="HTML5 Icon" style="width:128px; height: 128px; padding: 10px; align: left; border-right: 2px solid #e6e6e6;">
+        <div class = "pollHeader">
+          <h2>Sample question for poll</h2>
+        </div>
+      </section>
+
+      <section class = "result">
+        <img src = "images/stock.jpg" alt="HTML5 Icon" style="width:128px; height: 128px; padding: 10px; align: left; border-right: 2px solid #e6e6e6;">
+        <div class = "pollHeader">
+          <h2>Sample question for poll</h2>
+        </div>
+      </section>
+
+      <section class = "result">
+        <img src = "images/stock.jpg" alt="HTML5 Icon" style="width:128px; height: 128px; padding: 10px; align: left; border-right: 2px solid #e6e6e6;">
+        <div class = "pollHeader">
+          <h2>Sample question for poll</h2>
+        </div>
+      </section>
+
+      <section class = "result">
+        <img src = "images/stock.jpg" alt="HTML5 Icon" style="width:128px; height: 128px; padding: 10px; align: left; border-right: 2px solid #e6e6e6;">
+        <div class = "pollHeader">
+          <h2>Sample question for poll</h2>
+        </div>
       </section>
 
       <section class = "result">
