@@ -85,6 +85,13 @@ function closeCreatePollModal() {
 //  }
 //}
 
+function searchInput() {
+    if(event.keyCode == 13) {
+         var searchInputElem = document.getElementById("search").value;
+        console.log('== Search: ', searchInputElem);
+    }
+}
+
 /* All the variables for button clicks reside here */
 window.addEventListener('DOMContentLoaded', function (event) {
     var openDropDownElem = document.getElementById('myDropdown');
@@ -97,6 +104,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
         addPollOption.addEventListener('click', newPollOption);
     
     var modalCloseButton = document.querySelector('#create-poll-modal .modal-close-button');
-        modalCloseButton.addEventListener('click', closeCreatePollModal);
-        
+        modalCloseButton.addEventListener('click', closeCreatePollModal); 
+    
+    var searchBoxElem = document.getElementById('search');
+        searchBoxElem.addEventListener("keyup", searchInput);
 });

@@ -5,7 +5,7 @@
         },
         "multi": false,
         "uploaded": "2016-04-12T21:27:44+0000",
-        "category": "Food",
+        "category": "Science",
         "title": "What should I get for dinner?",
         "options": [
             "Rice ",
@@ -17,4 +17,13 @@
             23,
             304
         ]           
+    }
+
+    {
+        "genres": [
+            "Science",
+            "Tech",
+            "Music",
+            "Politics"
+        ]
     }
