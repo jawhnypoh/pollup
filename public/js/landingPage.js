@@ -66,6 +66,14 @@ function closeCreatePollModal() {
 //    input.value = '';
 //  }
 //}
+var convertToQS = function(title, detail, genre, options){
+    var vote = [];
+    for(var i = 0; i < options.length; i++){
+        vote.push(0);
+    }
+    var QS = "title=" + title + "&detail=" + detail + "&genre=" + genre + "&options=" + options + "&vote=" + vote;
+    return QS;
+}
 
 function displayPollResults() {
   var pollInputSubject = document.getElementById('poll-input-subject').value || '';
@@ -84,21 +92,14 @@ function displayPollResults() {
           //0 = subject
           //1 = genre
           //2 = details
-          //3 = options
-          var data = [
-            pollInputSubject.trim(),
-            pollInputGenre.trim(),
-            pollInputDetails.trim(),
-            names
-          ];
-          if (localStorage.getItem(1) === null) {
-            idNum = 0;
-            localStorage.setItem(1, ++idNum);
-          } else {
-          idNum = localStorage.getItem(1);
-          localStorage.setItem(1, ++idNum); //sets ID number for storage
-          }
-          closeCreatePollModal();
+          //3 = options / names
+        var request = new XMLHttpRequest();
+        request.open('POST', 'http://localhost:3000/createPoll', true);
+        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        request.send(convertToQS(pollInputSubject.trim(), pollInputDetails.trim(), pollInputGenre.trim(), names));
+          console.log(pollInputSubject.trim(), pollInputDetails.trim(), pollInputGenre.trim(), names);
+        window.location.href = "resultsPage.html";
+        closeCreatePollModal();
         } else {
             alert('You must enter at least one option!');
         }
