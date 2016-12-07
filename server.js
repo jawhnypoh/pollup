@@ -139,17 +139,19 @@ var express = require('express');
 var app = express();
 
 var staticDir = path.join(__dirname, 'public');
-var indexFilename = 'landingPage.html';
-var notFoundFilename = '404.html';
+var index = 'mainPage.html';
 var port = process.env.PORT || 3000;
 
 app.get('/', function (req, res, next) {
-    console.log(path.join(staticDir, indexFilename));
-    res.sendFile(path.join(staticDir, indexFilename));
+    res.sendFile(path.join(staticDir, index));
     //next();
 });
 
 app.use(express.static(staticDir));
+
+app.get('*', function(req, res) {
+    res.status(404).sendFile(path.join(staticDir, '/404.html'));
+});
 
 app.listen(port, function() {
     console.log("Listening on " + port);
