@@ -13,7 +13,7 @@ body{
 main {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 20px 100px 20px;
+  /*padding: 20px 20px 100px 20px;*/
 }
 
 /* Styling for the header */
@@ -30,6 +30,7 @@ header h1 {
   margin-left: 10px;
   padding-right: 20px;
   padding-left: 10px;
+  height: 37px;
 }
 
 
@@ -40,6 +41,9 @@ a {
 
 .header-list-left{
   display: inline-block;
+  height: 37px;
+  position: fixed;
+  top: 10px;
 }
 .header-list-right{
   display: inline-block;
@@ -120,12 +124,12 @@ a {
 
 /* Styling for the main container holding the polls */
 .container{
+  padding-top: 37px;
   background-color: white; /* main background color*/
   width: 60%;
   margin: auto;
   min-height: 1305px;
   min-width: 800px;
-  box-shadow: 5px 5px 5px 5px #888888;
 }
 
 input[type=text]{
@@ -151,7 +155,7 @@ input[type=text]{
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
-  margin: 10px 2px;
+  margin: auto;
   cursor: pointer;
   border-radius: 4px;
   position: relative;
