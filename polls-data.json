@@ -1,6 +1,1 @@
-{
-    "polls":
-    [
-        
-    ]
-}
+{"polls":[{"title":"\"should we go\"","id":0,"detail":"\"answer\"","genre":"\"lifestyle\"","options":"[\"yes\",\"no\",\"whatever\"]","vote":"[0,0,0]"}]}

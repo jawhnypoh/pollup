@@ -4,19 +4,17 @@
     <title>DONT TOUCH MY TEST PAGE</title>
     <meta charset = 'utf8'>
     <script>
-        var data = {
-            title: "should we go out to eat?",
-            detail: "Answer the question",
-            genre: "lifestyle",
-            options: ["yes", "no", "whatever"],
-            vote: [0, 0, 0]
-        };
         
+        var convertToQS = function(title, detail, genre, options, vote){
+            var QS = "title=" + title + "&detail=" + detail + "&genre=" + genre + "&options=" + options + "&vote=" + vote;
+            return QS;
+        }
         // Convert the code to query string below
         var request = new XMLHttpRequest();
+        console.log([1,2,2,3] + "Hello");
         request.open('POST', 'http://localhost:3000/createPoll', true);
         request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.send('title="should we go"&detail="answer"&genre="lifestyle"&options=["yes","no","whatever"]&vote=[0,0,0]');
+        request.send(convertToQS(/*fill this in */));
     </script>
 </head>
 <body>

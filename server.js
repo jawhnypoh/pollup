@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var createPoll = function (req, file) {
-    console.log(req.body);
     var fileStr = file, idNum;
     if(fileStr.polls[0]){
         idNum = fileStr.polls[fileStr.polls.length - 1].id + 1;
@@ -38,6 +37,10 @@ app.post('/createPoll', function(req, res) {
     fs.writeFile(path.join(__dirname, 'polls-data.json'), JSON.stringify(fileStr));
     res.end();
 });
+
+var vote = function (req, file) {
+    
+}
 
 app.post('/vote', function(req, res){
     vote(req, file);
