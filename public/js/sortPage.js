@@ -34,3 +34,16 @@ window.addEventListener('DOMContentLoaded', function(event){
   var bodySearchBoxElem = document.getElementById('bodySearch');
   bodySearchBoxElem.addEventListener("keyup", bodySearchInput);
 });
+
+function load() {
+	var mydata = JSON.parse(polls);
+
+  setHeaders(mydata);
+}
+
+function setHeaders(mydata){
+  document.getElementById('h1').innerHTML = mydata[0].title;
+  document.getElementById('h2').innerHTML = mydata[1].title;
+  document.getElementById('h3').innerHTML = mydata[2].title;
+  document.getElementById('h4').innerHTML = mydata[3].title;
+}
