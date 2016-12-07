@@ -228,7 +228,6 @@ input[type=text]{
   height: 150px;
   border-top: 2px solid #e6e6e6;
   border-bottom: none;
-  /*padding: 0 25px 0 25px;*/
   word-wrap: break-word;
   top: 20px;
   transition: 0.4s;
@@ -257,52 +256,63 @@ footer {
   height: 250px;
 }
 
-
 .footer-image {
     display: inline-block;
     vertical-align: top;
     padding-top: 30px;
-    padding-left: 600px;
-    padding-right:70px;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    text-align: right;
 }
 
 .footer-image p {
     display:inline-block;
     vertical-align: top;
-    padding-top: 6px;
     padding-left: 10px;
     font-size: 35px;
 }
 
-.footer-lists {
-    display: inline-block;
-    padding-top: 40px;
-    font-size: 12px;
+.footerLists{
+  display: inline-block;
+  height: 100%;
+  padding-top: 30px;
 }
 
 .footer-list-left {
     display: inline-block;
     padding-right: 20px;
-    vertical-align:top;
+    padding-left: 20px;
+    vertical-align: top;
+}
+
+.leftList{
+  list-style-type: none;
+}
+.leftList a{
+  color: grey;
+}
+.leftList a:hover{
+  color: #4CE457;
+  transition-duration: .4s;
 
 }
+
+
+
+.rightList{
+  list-style-type: none;
+}
+.rightList a{
+  color: grey;
+}
+.rightList a:hover{
+  color: #4CE457;
+  transition-duration: .4s;
+}
+
 .footer-list-right {
     display: inline-block;
-    padding-left: 50px;
-}
-
-.footer-item {
-  text-decoration: none;
-  padding-top: 10px;
-}
-.footer-item a {
-  color:grey;
-  font-size: 12px;
-  text-decoration: none;
-  transition-duration: 0.4s;
-
-}
-
-.footer-item a:hover {
-    color: #4CE457;
+    padding-left: 30px;
+    position: relative;
 }
