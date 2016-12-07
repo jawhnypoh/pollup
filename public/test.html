@@ -6,10 +6,13 @@
     <script>
         
         var convertToQS = function(title, detail, genre, options, vote){
+            var vote = [];
+            for(var i = 0; i < options.length; i++){
+                vote.push(0);
+            }
             var QS = "title=" + title + "&detail=" + detail + "&genre=" + genre + "&options=" + options + "&vote=" + vote;
             return QS;
         }
-        // Convert the code to query string below
         var request = new XMLHttpRequest();
         console.log([1,2,2,3] + "Hello");
         request.open('POST', 'http://localhost:3000/createPoll', true);
