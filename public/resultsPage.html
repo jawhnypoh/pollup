@@ -53,18 +53,23 @@
       </div>
 
    <div class = "resultsContainer">
-      <div class="question">QUESTION?</div>
-      <div id="resultsModal class= results-modal">
+<!--      <div class="question">QUESTION?</div>-->
+      <div id="resultsModal" class= "results-modal">
+      <div id="results-modal-backdrop"></div>
+
           <div class="results-modal-content">
+            <span class="close">x</span>
+
+            <div class="question">QUESTION?</div>
+
               <form method="get">
-                <input type="checkbox" name="option">Option 1</input></br>
-                <input type="checkbox" name="option">Option 2</input></br>
+                <input type="checkbox" id="option-choices" name="option">Option 1</input></br>
+                <input type="checkbox" id="option-choices" name="option" >Option 2</input></br>
                 <section class="buttons">
                     <button id = "buttonVote">Vote</button>
                     <button id = "buttonResults">Results</button>
                 </section>
               </form>
-
         </div>
       </div>
 
@@ -113,20 +118,18 @@
     <div id="donutchart" style="width: 900px; height: 300px;"></div>     
 
           </div>
-              <div class="option-results"><div class="option-results">Option 1</div> - 70%</div>
+              <div class="option-results-div"><div class="option-results">Option 1</div> - 70%</div>
 
-              <div class="option-results"><div class="option-results">Option 2</div> - 30%</div>
+              <div class="option-results-div"><div class="option-results">Option 2</div> - 30%</div>
 
 
         </div>
 
     </div>
 
-<!--
     <div class="spacing">
 
     </div>
--->
 
     </main>
 

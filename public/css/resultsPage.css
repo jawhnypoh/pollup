@@ -158,7 +158,7 @@ input#search {
     font-weight: bolder;
     padding-left: 60px;
     padding-top: 20px;
-    
+    color: gray;
 }
 
 .buttons{
@@ -166,26 +166,41 @@ input#search {
 }
 
 .results-modal {
-    color: blue;
-    z-index: 1; /*sit on top */
+    color: gray;
+    z-index: 1010; /*sit on top */
     left: 0;
     top: 0;
     width: 100%;
+    height: auto;
     overflow: auto;
+    position: fixed;
 }
 
 .results-modal-content {
-
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
+    margin-top: 70px;
     padding: 20px;
+    height: 800px;
     border: 1px solid #888;
+    border-radius: 20px;
     width: 80%; /* Could be more or less, depending on screen size */
 }
-form{
+
+.close {
+    float: right;
+    color: black;
+    font-size: 28px;
+}
+
+form {
   font-size: 24px;
   font-weight: lighter;
   padding: 60px;
+}
+
+#option-choices {
+    margin: 10px;
 }
 
 #buttonVote{
@@ -194,6 +209,8 @@ form{
     padding: 15px;
     padding: 20px;
     margin: 20px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
 }
 #buttonVote:hover{
   cursor: pointer;
@@ -206,7 +223,10 @@ form{
     padding: 15px;
     padding: 20px;
     margin: 20px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
 }
+
 #buttonResults:hover{
   cursor: pointer;
   background-color: #d9d9d9;
@@ -226,7 +246,7 @@ form{
 /* Styling for Spacing */
 .spacing {
     width: 100%;
-    height: 100px;
+    height: 350px;
 }
 
 
@@ -237,6 +257,17 @@ form{
     background: grey;
 }
 
+
+/* Option Results Styling */
+.option-results-div {
+    margin-left: 50px; 
+    margin-bottom: 30px;
+}
+
+.option-results {
+    font-size: 30px;
+    font-weight: 500;
+}
 
 /* Styling for Create Poll Button */
 #create-poll-button {
@@ -319,9 +350,7 @@ footer {
 .leftList a:hover{
   color: #4CE457;
   transition-duration: .4s;
-
 }
-
 
 
 .rightList{
